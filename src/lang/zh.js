@@ -61,8 +61,20 @@ export default {
     theme: '换肤',
     clipboardDemo: 'Clipboard',
     i18n: '国际化',
-    externalLink: '外链'
+    externalLink: '外链',
+
+    resourceManage: '资源管理',
+    processTemplate: '批量处理模板',
+    taskManage: '任务管理',
+    taskCreation: '任务创建',
+    taskList: '任务列表',
+    movieManage: '影视管理',
+    movieList: '影视列表',
+    createFilm: '创建电影',
+    creaTetelevision: '创建电视剧'
+
   },
+
   navbar: {
     logOut: '退出登录',
     dashboard: '首页',
