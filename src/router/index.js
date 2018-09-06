@@ -141,6 +141,100 @@ export const asyncRouterMap = [
       }
     ]
   },
+  {
+    path: '/resourceManage',
+    component: Layout,
+    redirect: '/resourceManage',
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'resourceManage',
+      icon: 'zip',
+      roles: ['admin', 'editor'] // you can set roles in root nav
+    },
+    children: [
+      {
+        path: 'processTemplate',
+        component: () => import('@/views/resourceManage/processTemplate'),
+        name: 'processTemplate',
+        meta: {
+          title: 'processTemplate'
+          // roles: ['admin'] // or you can only set roles in sub nav
+        }
+      }
+    ]
+  },
+
+  {
+    path: '/taskManage',
+    component: Layout,
+    redirect: '/taskManage',
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'taskManage',
+      icon: 'lock',
+      roles: ['admin', 'editor'] // you can set roles in root nav
+    },
+    children: [
+      {
+        path: 'taskCreation',
+        component: () => import('@/views/taskManage/taskCreation'),
+        name: 'taskCreation',
+        meta: {
+          title: 'taskCreation'
+          // roles: ['admin'] // or you can only set roles in sub nav
+        }
+      },
+      {
+        path: 'taskList',
+        component: () => import('@/views/taskManage/taskList'),
+        name: 'taskList',
+        meta: {
+          title: 'taskList'
+          // if do not set roles, means: this page does not require permission
+        }
+      }
+    ]
+  },
+
+  {
+    path: '/movieManage',
+    component: Layout,
+    redirect: '/movieManage',
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'movieManage',
+      icon: 'lock',
+      roles: ['admin', 'editor'] // you can set roles in root nav
+    },
+    children: [
+      {
+        path: 'movieList',
+        component: () => import('@/views/movieManage/movieList'),
+        name: 'movieList',
+        meta: {
+          title: 'movieList'
+        }
+      },
+      {
+        path: 'createFilm',
+        component: () => import('@/views/movieManage/createFilm'),
+        name: 'createFilm',
+        meta: {
+          title: 'createFilm'
+          // if do not set roles, means: this page does not require permission
+        }
+      },
+      {
+        path: 'creaTetelevision',
+        component: () => import('@/views/movieManage/creaTetelevision'),
+        name: 'creaTetelevision',
+        meta: {
+          title: 'creaTetelevision'
+          // if do not set roles, means: this page does not require permission
+        }
+      }
+    ]
+  },
 
   {
     path: '/icon',
