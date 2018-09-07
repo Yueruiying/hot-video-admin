@@ -1,23 +1,21 @@
 <template>
-  <div class="chart-container">
-    <chart height="100%" width="100%"/>
+  <div class="app-container">
+    <v-pageSearch class="warn-content"/>
   </div>
 </template>
 
 <script>
-import Chart from '@/components/Charts/keyboard'
-
 export default {
-  name: 'KeyboardChart',
-  components: { Chart }
+  data() {
+    return {
+      driverOptions: [
+
+      ]
+    }
+  },
+  mounted() {
+  },
+  methods: {
+  }
 }
 </script>
-
-<style scoped>
-.chart-container{
-  position: relative;
-  padding: 20px;
-  width: 100%;
-  height: 85vh;
-}
-</style>
